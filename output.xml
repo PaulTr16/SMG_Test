@@ -1,138 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on linux)" generated="20231120 03:54:57.400" rpa="false" schemaversion="4">
-<suite id="s1" name="Invalid Offset" source="/home/paul/Desktop/SMG-test/API/tests/invalid_offset.robot">
-<test id="s1-t1" name="Negative offset value&#10;" line="23">
-<kw name="Verify Response Invalid Offset Value">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on linux)" generated="20231120 04:56:25.613" rpa="false" schemaversion="4">
+<suite id="s1" name="Valid Data" source="/home/paul/Desktop/SMG_Test/API/tests/valid_data.robot">
+<test id="s1-t1" name="Valid" line="23">
+<kw name="Verify Response valid Value">
 <arg>Software testing</arg>
-<arg>-1</arg>
+<arg>1</arg>
 <kw name="Test Wikipedia Search Api" library="WikiAPILib">
 <var>${response}</var>
 <arg>${srsearch}</arg>
 <arg>${sroffset}</arg>
-<msg timestamp="20231120 03:54:58.486" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231120 03:54:57.530" endtime="20231120 03:54:58.486"/>
+<msg timestamp="20231120 04:56:26.607" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231120 04:56:25.682" endtime="20231120 04:56:26.607"/>
 </kw>
 <kw name="Verify Status Code" library="WikiAPILib">
 <arg>${response.status_code}</arg>
 <arg>200</arg>
-<msg timestamp="20231120 03:54:58.487" level="INFO">Argument types are:
+<msg timestamp="20231120 04:56:26.608" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<msg timestamp="20231120 03:54:58.487" level="INFO">Status_code: 200
+<msg timestamp="20231120 04:56:26.608" level="INFO">Status_code: 200
 Expectation Status_code: 200</msg>
-<status status="PASS" starttime="20231120 03:54:58.486" endtime="20231120 03:54:58.487"/>
+<status status="PASS" starttime="20231120 04:56:26.608" endtime="20231120 04:56:26.608"/>
 </kw>
-<kw name="Verify Invalid Offset Value" library="WikiAPILib">
+<kw name="Verify Search Successfully" library="WikiAPILib">
 <arg>${sroffset}</arg>
+<arg>${srsearch}</arg>
 <arg>${response.content}</arg>
-<msg timestamp="20231120 03:54:58.488" level="INFO">-1</msg>
-<status status="PASS" starttime="20231120 03:54:58.487" endtime="20231120 03:54:58.488"/>
+<msg timestamp="20231120 04:56:26.609" level="INFO">Length is 10</msg>
+<status status="PASS" starttime="20231120 04:56:26.608" endtime="20231120 04:56:26.609"/>
 </kw>
-<status status="PASS" starttime="20231120 03:54:57.530" endtime="20231120 03:54:58.489"/>
+<status status="PASS" starttime="20231120 04:56:25.682" endtime="20231120 04:56:26.609"/>
 </kw>
-<status status="PASS" starttime="20231120 03:54:57.529" endtime="20231120 03:54:58.489"/>
+<status status="PASS" starttime="20231120 04:56:25.681" endtime="20231120 04:56:26.609"/>
 </test>
-<test id="s1-t2" name="Missing Offset value" line="23">
-<kw name="Verify Response Invalid Offset Value">
+<test id="s1-t2" name="Valid srsearch | sroffset=0" line="23">
+<kw name="Verify Response valid Value">
 <arg>Software testing</arg>
+<arg>0</arg>
 <kw name="Test Wikipedia Search Api" library="WikiAPILib">
 <var>${response}</var>
 <arg>${srsearch}</arg>
 <arg>${sroffset}</arg>
-<msg timestamp="20231120 03:54:59.305" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231120 03:54:58.491" endtime="20231120 03:54:59.305"/>
+<msg timestamp="20231120 04:56:27.291" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231120 04:56:26.611" endtime="20231120 04:56:27.291"/>
 </kw>
 <kw name="Verify Status Code" library="WikiAPILib">
 <arg>${response.status_code}</arg>
 <arg>200</arg>
-<msg timestamp="20231120 03:54:59.306" level="INFO">Argument types are:
+<msg timestamp="20231120 04:56:27.292" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<msg timestamp="20231120 03:54:59.306" level="INFO">Status_code: 200
+<msg timestamp="20231120 04:56:27.293" level="INFO">Status_code: 200
 Expectation Status_code: 200</msg>
-<status status="PASS" starttime="20231120 03:54:59.305" endtime="20231120 03:54:59.306"/>
+<status status="PASS" starttime="20231120 04:56:27.292" endtime="20231120 04:56:27.293"/>
 </kw>
-<kw name="Verify Invalid Offset Value" library="WikiAPILib">
+<kw name="Verify Search Successfully" library="WikiAPILib">
 <arg>${sroffset}</arg>
+<arg>${srsearch}</arg>
 <arg>${response.content}</arg>
-<status status="PASS" starttime="20231120 03:54:59.306" endtime="20231120 03:54:59.307"/>
+<msg timestamp="20231120 04:56:27.294" level="INFO">Length is 10</msg>
+<status status="PASS" starttime="20231120 04:56:27.293" endtime="20231120 04:56:27.294"/>
 </kw>
-<status status="PASS" starttime="20231120 03:54:58.491" endtime="20231120 03:54:59.307"/>
+<status status="PASS" starttime="20231120 04:56:26.610" endtime="20231120 04:56:27.294"/>
 </kw>
-<status status="PASS" starttime="20231120 03:54:58.489" endtime="20231120 03:54:59.308"/>
+<status status="PASS" starttime="20231120 04:56:26.610" endtime="20231120 04:56:27.294"/>
 </test>
-<test id="s1-t3" name="Non_int_offset" line="23">
-<kw name="Verify Response Invalid Offset Value">
+<test id="s1-t3" name="Valid srsearch | sroffset=9999" line="23">
+<kw name="Verify Response valid Value">
 <arg>Software testing</arg>
-<arg>abc</arg>
+<arg>9999</arg>
 <kw name="Test Wikipedia Search Api" library="WikiAPILib">
 <var>${response}</var>
 <arg>${srsearch}</arg>
 <arg>${sroffset}</arg>
-<msg timestamp="20231120 03:54:59.864" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231120 03:54:59.310" endtime="20231120 03:54:59.864"/>
+<msg timestamp="20231120 04:56:27.939" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231120 04:56:27.297" endtime="20231120 04:56:27.939"/>
 </kw>
 <kw name="Verify Status Code" library="WikiAPILib">
 <arg>${response.status_code}</arg>
 <arg>200</arg>
-<msg timestamp="20231120 03:54:59.866" level="INFO">Argument types are:
+<msg timestamp="20231120 04:56:27.940" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<msg timestamp="20231120 03:54:59.866" level="INFO">Status_code: 200
+<msg timestamp="20231120 04:56:27.940" level="INFO">Status_code: 200
 Expectation Status_code: 200</msg>
-<status status="PASS" starttime="20231120 03:54:59.865" endtime="20231120 03:54:59.866"/>
+<status status="PASS" starttime="20231120 04:56:27.939" endtime="20231120 04:56:27.940"/>
 </kw>
-<kw name="Verify Invalid Offset Value" library="WikiAPILib">
+<kw name="Verify Search Successfully" library="WikiAPILib">
 <arg>${sroffset}</arg>
-<arg>${response.content}</arg>
-<msg timestamp="20231120 03:54:59.867" level="INFO">abc</msg>
-<status status="PASS" starttime="20231120 03:54:59.866" endtime="20231120 03:54:59.867"/>
-</kw>
-<status status="PASS" starttime="20231120 03:54:59.309" endtime="20231120 03:54:59.867"/>
-</kw>
-<status status="PASS" starttime="20231120 03:54:59.308" endtime="20231120 03:54:59.868"/>
-</test>
-<test id="s1-t4" name="large offset " line="23">
-<kw name="Verify Response Invalid Offset Value">
-<arg>Software testing</arg>
-<arg>10000000</arg>
-<kw name="Test Wikipedia Search Api" library="WikiAPILib">
-<var>${response}</var>
 <arg>${srsearch}</arg>
-<arg>${sroffset}</arg>
-<msg timestamp="20231120 03:55:00.367" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231120 03:54:59.870" endtime="20231120 03:55:00.367"/>
-</kw>
-<kw name="Verify Status Code" library="WikiAPILib">
-<arg>${response.status_code}</arg>
-<arg>200</arg>
-<msg timestamp="20231120 03:55:00.368" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<msg timestamp="20231120 03:55:00.368" level="INFO">Status_code: 200
-Expectation Status_code: 200</msg>
-<status status="PASS" starttime="20231120 03:55:00.367" endtime="20231120 03:55:00.368"/>
-</kw>
-<kw name="Verify Invalid Offset Value" library="WikiAPILib">
-<arg>${sroffset}</arg>
 <arg>${response.content}</arg>
-<msg timestamp="20231120 03:55:00.369" level="INFO">10000000</msg>
-<status status="PASS" starttime="20231120 03:55:00.368" endtime="20231120 03:55:00.369"/>
+<msg timestamp="20231120 04:56:27.942" level="INFO">Length is 1</msg>
+<status status="PASS" starttime="20231120 04:56:27.941" endtime="20231120 04:56:27.942"/>
 </kw>
-<status status="PASS" starttime="20231120 03:54:59.870" endtime="20231120 03:55:00.369"/>
+<status status="PASS" starttime="20231120 04:56:27.296" endtime="20231120 04:56:27.942"/>
 </kw>
-<status status="PASS" starttime="20231120 03:54:59.868" endtime="20231120 03:55:00.369"/>
+<status status="PASS" starttime="20231120 04:56:27.295" endtime="20231120 04:56:27.942"/>
 </test>
-<status status="PASS" starttime="20231120 03:54:57.401" endtime="20231120 03:55:00.370"/>
+<status status="PASS" starttime="20231120 04:56:25.614" endtime="20231120 04:56:27.943"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="Invalid Offset">Invalid Offset</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Valid Data">Valid Data</stat>
 </suite>
 </statistics>
 <errors>
