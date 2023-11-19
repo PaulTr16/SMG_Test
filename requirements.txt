@@ -1,0 +1,34 @@
+async-generator==1.10
+attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1683424013410/work
+Brotli @ file:///work/perseverance-python-buildout/croot/brotli-split_1698805593785/work
+certifi==2023.7.22
+charset-normalizer==3.3.2
+chromedriver-autoinstaller==0.6.2
+docutils==0.20.1
+exceptiongroup @ file:///home/conda/feedstock_root/build_artifacts/exceptiongroup_1692026125334/work
+h11 @ file:///home/conda/feedstock_root/build_artifacts/h11_1664132893548/work
+idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1663625384323/work
+iniconfig @ file:///home/linux1/recipes/ci/iniconfig_1610983019677/work
+outcome @ file:///home/conda/feedstock_root/build_artifacts/outcome_1698324044871/work
+packaging @ file:///work/perseverance-python-buildout/croot/packaging_1698805390494/work
+pluggy @ file:///work/perseverance-python-buildout/croot/pluggy_1698805497733/work
+Pygments==2.17.0
+PySocks @ file:///home/conda/feedstock_root/build_artifacts/pysocks_1661604839144/work
+pytest @ file:///work/perseverance-python-buildout/croot/pytest_1698845497894/work
+PyYAML==6.0.1
+requests==2.31.0
+robotframework==6.1.1
+robotframework-datadriver==1.9.0
+robotframework-pythonlibcore==4.2.0
+robotframework-requests==0.9.6
+robotframework-seleniumlibrary==6.1.3
+selenium @ file:///home/conda/feedstock_root/build_artifacts/selenium_1682107665443/work
+setuptools==68.0.0
+sniffio @ file:///home/conda/feedstock_root/build_artifacts/sniffio_1662051266223/work
+sortedcontainers @ file:///home/conda/feedstock_root/build_artifacts/sortedcontainers_1621217038088/work
+trio==0.23.1
+trio-websocket @ file:///home/conda/feedstock_root/build_artifacts/trio-websocket_1695816857197/work/dist
+typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1695040754690/work
+urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1697813446430/work
+wheel==0.41.2
+wsproto @ file:///home/conda/feedstock_root/build_artifacts/wsproto_1661356345548/work

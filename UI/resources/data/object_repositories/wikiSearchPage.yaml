@@ -1,0 +1,14 @@
+SearchPage:
+  search_heading: //h1[@id='firstHeading' and contains(text(),'Search')]
+  search_input_tab: //input[@id='ooui-php-1']
+  advanced_search_tab: //label[contains(text(),'Advanced search:')]
+  search_in_tab: //label[contains(text(),'Search in:')]
+  search_clear_text_bnt: //div[@id='searchText']/span[2]
+  search_btn: //button[@type='submit']
+
+
+SearchResult:
+  none_found_message: //p[@class='mw-search-nonefound' and contains(text(),'There were no results matching the query')]
+  create_draft_and_submit: //a[@title='Wikipedia:Article wizard' and contains(text(),'create a draft and submit it for review')]
+  request_redirect_created: //a[@title='Wikipedia:Articles for creation/Redirects and categories' and contains(text(),'request that a redirect be created')]
+  page_results_container: //div[@class='mw-search-results-container']

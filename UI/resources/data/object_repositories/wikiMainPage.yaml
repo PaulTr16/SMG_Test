@@ -1,0 +1,5 @@
+MainPage:
+  main_search_box: //form[@id='searchform']//input[@type='search']
+  search_for_page_contain: //ul[@id='cdx-typeahead-search-menu-0']//span[contains(text(),'Search for pages containing')]
+  search_bnt: //form[@id='searchform']//button[.='Search']
+  

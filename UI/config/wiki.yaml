@@ -1,0 +1,13 @@
+Wiki:
+  object_repositories: /UI/resources/data/object_repositories
+  web_browser: Chrome
+  url: https://en.wikipedia.org/wiki/Main_Page
+  caps:
+    chromeOptions:
+      args:
+      #  - --headless
+        - --no-sandbox-
+        - start-maximized
+        - disable-infobars
+        - --disable-extensions
+        - --window-size=1920,1080
