@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on linux)" generated="20231120 04:36:48.519" rpa="false" schemaversion="4">
+<suite id="s1" name="Test Valid Basic Searh" source="/home/paul/Desktop/SMG_Test/UI/tests/test_valid_basic_searh.robot">
+<kw name="Open Testing Browser" library="Wiki.BasePage" type="SETUP">
+<kw name="Open Web Browser" library="WikiBasePage">
+<msg timestamp="20231120 04:36:49.301" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<msg timestamp="20231120 04:36:53.046" level="INFO">${selenium_driver} = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="7d08b4ee9b16b329a1e66af2a93bac87")&gt;</msg>
+<status status="PASS" starttime="20231120 04:36:49.297" endtime="20231120 04:36:53.046"/>
+</kw>
+<status status="PASS" starttime="20231120 04:36:49.297" endtime="20231120 04:36:53.047"/>
+</kw>
+<test id="s1-t1" name="Verify UI" line="18">
+<kw name="Click Search Button To Go To Search Page" library="Wiki.MainPage">
+<kw name="Go To Main Page" library="WikiMainPage">
+<msg timestamp="20231120 04:36:53.051" level="INFO">Opening url 'https://en.wikipedia.org/wiki/Main_Page'</msg>
+<status status="PASS" starttime="20231120 04:36:53.049" endtime="20231120 04:36:55.144"/>
+</kw>
+<kw name="Main Page Click Search Bnt" library="WikiMainPage">
+<msg timestamp="20231120 04:36:55.202" level="INFO">Clicking button '//form[@id='searchform']//button[.='Search']'.</msg>
+<status status="PASS" starttime="20231120 04:36:55.144" endtime="20231120 04:36:56.455"/>
+</kw>
+<status status="PASS" starttime="20231120 04:36:53.049" endtime="20231120 04:36:56.455"/>
+</kw>
+<kw name="Verify Search Page UI Contain All Tab" library="Wiki.SearchPage">
+<kw name="Go To Search Page" library="WikiSearchPage">
+<status status="PASS" starttime="20231120 04:36:56.456" endtime="20231120 04:36:56.456"/>
+</kw>
+<kw name="Ui Search Page" library="WikiSearchPage">
+<msg timestamp="20231120 04:36:56.698" level="INFO">Current page contains element '//h1[@id='firstHeading' and contains(text(),'Search')]'.</msg>
+<msg timestamp="20231120 04:36:56.748" level="INFO">Current page contains element '//input[@id='ooui-php-1']'.</msg>
+<msg timestamp="20231120 04:36:56.762" level="INFO">Current page contains element '//label[contains(text(),'Advanced search:')]'.</msg>
+<msg timestamp="20231120 04:36:56.774" level="INFO">Current page contains element '//label[contains(text(),'Search in:')]'.</msg>
+<status status="PASS" starttime="20231120 04:36:56.456" endtime="20231120 04:36:56.774"/>
+</kw>
+<status status="PASS" starttime="20231120 04:36:56.455" endtime="20231120 04:36:56.774"/>
+</kw>
+<status status="PASS" starttime="20231120 04:36:53.047" endtime="20231120 04:36:56.774"/>
+</test>
+<test id="s1-t2" name="Verify Can Access Search For Page Containing Text from MainPage" line="22">
+<kw name="Main Page Input Search Text" library="Wiki.MainPage">
+<arg>Software Testing</arg>
+<kw name="Go To Main Page" library="WikiMainPage">
+<msg timestamp="20231120 04:36:56.778" level="INFO">Opening url 'https://en.wikipedia.org/wiki/Main_Page'</msg>
+<status status="PASS" starttime="20231120 04:36:56.776" endtime="20231120 04:36:56.929"/>
+</kw>
+<kw name="Main Page Input Search Value And Go To Search Page" library="WikiMainPage">
+<arg>${text}</arg>
+<msg timestamp="20231120 04:36:59.930" level="INFO">Slept 3 seconds</msg>
+<msg timestamp="20231120 04:36:59.931" level="INFO">Simulating Mouse Over on element '//form[@id='searchform']//input[@type='search']'.</msg>
+<msg timestamp="20231120 04:37:00.229" level="INFO">Typing text 'Software Testing' into text field '//form[@id='searchform']//input[@type='search']'.</msg>
+<msg timestamp="20231120 04:37:00.610" level="INFO">Clicking element '//ul[@id='cdx-typeahead-search-menu-0']//span[contains(text(),'Search for pages containing')]'.</msg>
+<status status="PASS" starttime="20231120 04:36:56.929" endtime="20231120 04:37:02.848"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231120 04:37:04.849" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231120 04:37:02.849" endtime="20231120 04:37:04.849"/>
+</kw>
+<status status="PASS" starttime="20231120 04:36:56.776" endtime="20231120 04:37:04.850"/>
+</kw>
+<kw name="Verify Search Result" library="Wiki.SearchPage">
+<var>${value}</var>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${value}</var>
+<arg>WikiSearchPage.Page Contain Result Container</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Contain Result Container" library="WikiSearchPage">
+<msg timestamp="20231120 04:37:04.884" level="INFO">Current page contains element '//div[@class='mw-search-results-container']'.</msg>
+<status status="PASS" starttime="20231120 04:37:04.851" endtime="20231120 04:37:04.884"/>
+</kw>
+<msg timestamp="20231120 04:37:04.884" level="INFO">${value} = True</msg>
+<status status="PASS" starttime="20231120 04:37:04.850" endtime="20231120 04:37:04.884"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231120 04:37:04.884" endtime="20231120 04:37:04.885"/>
+</kw>
+<msg timestamp="20231120 04:37:04.885" level="INFO">${value} = True</msg>
+<status status="PASS" starttime="20231120 04:37:04.850" endtime="20231120 04:37:04.885"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${value}</arg>
+<arg>${True}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231120 04:37:04.885" endtime="20231120 04:37:04.886"/>
+</kw>
+<status status="PASS" starttime="20231120 04:36:56.775" endtime="20231120 04:37:04.886"/>
+</test>
+<status status="PASS" starttime="20231120 04:36:48.521" endtime="20231120 04:37:04.888"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Test Valid Basic Searh">Test Valid Basic Searh</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

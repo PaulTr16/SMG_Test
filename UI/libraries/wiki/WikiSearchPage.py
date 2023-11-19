@@ -60,11 +60,8 @@ class WikiSearchPage(WikiBasePage):
     @keyword
     def page_contain_result_container(self):
         result_container = self.builtIn.get_variable_value("${SearchResult.page_results_container}")
-        print("here" + result_container)
-        value = self.builtIn.run_keyword_and_return_status(
-            self.page_should_contain_element(result_container))
-        print(value)
-        return value
+        self.page_should_contain_element(result_container)
+
         
 
 
